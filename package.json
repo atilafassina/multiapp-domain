@@ -1,0 +1,15 @@
+{
+  "name": "multi-zones",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "repository": "https://github.com/atilafassina/multi-zones",
+  "author": "Atila Fassina",
+  "license": "ISC"
+}
