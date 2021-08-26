@@ -1,11 +1,29 @@
 import { useSession } from 'next-auth/client'
-export default function About() {
+import styles from '@styles/about.module.css'
+
+const About = () => {
   const [session] = useSession()
-  console.log(session)
+
+  if (!session || !session.user) return null
+
+  const { user } = session
+
   return (
-    <main>
-      <h1>Hello /about</h1>
-      {session && <span>{session?.user?.name}</span>}
-    </main>
+    <article className={styles.container}>
+      <h1>Hello, {user.name}</h1>
+      {user.image && (
+        <img
+          className={styles.avatar}
+          src={user.image}
+          alt={`avatar for ${user.name}'s Github account`}
+        />
+      )}
+      <p>Github public e-mail: {user.email}</p>
+      <p>
+        you are logged in on the <code>main</code>app
+      </p>
+    </article>
   )
 }
+
+export default About
