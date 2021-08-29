@@ -9,7 +9,13 @@
     "semi": false,
     "singleQuote": true
   },
+  "scripts": {
+    "dev": "concurrently \"yarn workspace login dev\" \"yarn workspace main dev\""
+  },
   "repository": "https://github.com/atilafassina/multi-zones",
   "author": "Atila Fassina",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
 }

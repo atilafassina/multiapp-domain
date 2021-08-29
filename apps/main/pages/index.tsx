@@ -5,21 +5,28 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const [session] = useSession()
+  const userName = session?.user?.name
   return (
     <div className={styles.container}>
       <Head>
-        <title>😎</title>
+        <title>Jamstacky Micro-Frontend</title>
         <meta name="description" content="yup" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="/">main</a> app
+          {userName ? (
+            `Hello, ${userName}`
+          ) : (
+            <>
+              Welcome to <a href="/">main</a> app
+            </>
+          )}
         </h1>
 
         <p className={styles.description}>
-          Root is <code className={styles.code}>apps/main</code> in the monorepo
+          This is a <b>Jamstack micro-frontend</b>.
         </p>
 
         <div className={styles.grid}>
@@ -39,30 +46,27 @@ export default function Home() {
           </Link>
 
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
+            href="https://github.com/atilafassina/nextjs-multi-zone"
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2>Source &#8599;</h2>
+            <p>Check the code and documentation on Github</p>
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://nextjs.org/docs/advanced-features/multi-zones"
             className={styles.card}
           >
-            <h2>Deploy &#8599;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <h2>Next.js Multi-Zone &#8599;</h2>
+            <p>Documentation on Next.js Multi-Zone</p>
           </a>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        Powered by{' '}
-        <span role="img" aria-label="mate">
-          🧉
-        </span>
+        <a href="https://atila.io" rel="noopener noreferrer" target="_blank">
+          <img src="/atila-logo.png" alt="Atila.io logo" />
+        </a>
       </footer>
     </div>
   )
