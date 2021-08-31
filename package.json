@@ -1,5 +1,5 @@
 {
-  "name": "multi-zones",
+  "name": "jamstacky-micro-frontend",
   "version": "1.0.0",
   "private": true,
   "workspaces": [
@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "concurrently \"yarn workspace login dev\" \"yarn workspace main dev\""
   },
-  "repository": "https://github.com/atilafassina/multi-zones",
+  "repository": "https://github.com/atilafassina/jamstacky-micro-frontend",
   "author": "Atila Fassina",
   "license": "ISC",
   "devDependencies": {
