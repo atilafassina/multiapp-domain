@@ -1,4 +1,4 @@
-# Jamstacky Micro-Frontend 🚇
+# multiapp domain 🚇
 
 Proof-of-Concept of how **micro-frontend** would work within a Jamstack Architecture. It provides all performance benefits of a Jamstack applicaiton, together with the granularity of a micro-frontend for larger teams and apps.
 
