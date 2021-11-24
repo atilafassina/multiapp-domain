@@ -7,7 +7,7 @@
       "@components/*": ["components/*"],
       "@config/*": ["config/*"],
       "@locales/*": ["locales/*"],
-      "@shared/*": ["shared/*"],
+      "@shared/*": ["../../shared/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"]
     }
@@ -17,7 +17,7 @@
     "**/*.ts",
     "**/*.tsx",
     "next.config.js",
-    "sitemap.js"
+    "../../shared/components/*.tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,8 +1,14 @@
 const { LOGIN_URL } = process.env
-
+const i18n = require('../../shared/settings/i18n')
+/**
+ * @type {import('next').NextConfig}
+ */
 module.exports = {
   reactStrictMode: true,
-
+  i18n,
+  experimental: {
+    externalDir: true,
+  },
   async rewrites() {
     return [
       // special rewrite for a shared-service

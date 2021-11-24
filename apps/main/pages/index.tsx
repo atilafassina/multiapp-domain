@@ -2,10 +2,17 @@ import { useSession } from 'next-auth/client'
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import Hello from '@shared/components/hello'
+import { useRouter } from 'next/router'
 
 export default function Home() {
   const [session] = useSession()
   const userName = session?.user?.name
+
+  const router = useRouter()
+
+  console.log(router)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,6 +22,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Hello />
         <h1 className={styles.title}>
           {userName ? (
             `Hello, ${userName}`
