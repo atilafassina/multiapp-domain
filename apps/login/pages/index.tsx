@@ -23,6 +23,8 @@ export default function Login() {
       router.push('/loggedin')
     }
   })
+
+  console.log(router.locales)
   return (
     <div className={styles.container}>
       <button className={styles.button} onClick={() => signIn('github')}>
